@@ -1,4 +1,4 @@
-# Ystavakirja_2025
+# Ystäväkirja
 Yliopiston ensimmäisen vuoden opiskelijoita varten tehty Ystäväkirja. 
 Kirjan tarkoituksena auttaa orientaatiossa, sekä uusiin ihmisiin tutustumisessa. 
 
