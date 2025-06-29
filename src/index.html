@@ -10,11 +10,34 @@
 
 </head>
 <body>
-    <div id = "heading" class="flex-container">
-        <h1>Ystäväkirja</h1>
-    </div>
-    
-    <!--Tähän koodi kaikesta toiminnoista, esim. napit pienryhmille :)-->
+    <header class="main-header">
+        <div class="hamburger" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="logo-container">
+            <span class="logo-text">Ystäväkirja</span>
+        </div>
+        
+    </header>
+
+    <main class="group-container">
+        <section class="groups-section">
+            <h2>Ryhmät</h2>
+            <div class="groups-list" id="groups-list">
+                <!-- Placeholder idea ryhmille -->
+                <!-- Tällä hetkellä oma HTML dokumentti per ryhmä. Parempi jos uutta dokumenttia ei tarvitsisi luoda. -->
+                <a href="group1.html" class="group-btn">Ryhmä 1</a>
+                <a href="group2.html" class="group-btn">Ryhmä 2</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>Ystäväkirja &copy; 2025</p>
+    </footer>
 
 </body>
 </html>
