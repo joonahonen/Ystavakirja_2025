@@ -29,8 +29,14 @@
             <div class="groups-list" id="groups-list">
                 <!-- Placeholder idea ryhmille -->
                 <!-- Tällä hetkellä oma HTML dokumentti per ryhmä. Parempi jos uutta dokumenttia ei tarvitsisi luoda. -->
-                <a href="group1.html" class="group-btn">Ryhmä 1</a>
+                <!-- Tällähetkellä napit eivät ole oikeasti nappeja, vaan linkkejä jotka on stailattu css tiedostossa nappien näköiseksi -->
+                
+                <a href="groupview.html" class="group-btn">Ryhmä 1</a>
                 <a href="group2.html" class="group-btn">Ryhmä 2</a>
+
+                <!-- Ryhmä 3 nappi toimii eritavalla. Käytetään <button> tägiä ja script.js tiedostossa oleva redirectToPage funktio
+                laittaa näkymän halutulle näytölle.-->
+                <button class="group-btn" onclick="redirectToPage('groupview.html')">Ryhmä 3</button>
             </div>
         </section>
     </main>
@@ -39,5 +45,6 @@
         <p>Ystäväkirja &copy; 2025</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
