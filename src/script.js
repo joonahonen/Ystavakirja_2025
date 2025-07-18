@@ -8,7 +8,7 @@ const people = [
   { name: "Joona", age: 21, job: "Ohjelmoija" },
   { name: "Sirpa", age: 68, job: "Opettaja" },
   { name: "Niko", age: 23, job: "Prisma" },
-  { name: "Niko", age: 23, job: "Prisma" }
+  { name: "Kati", age: 21, job: "Powerpark" }
 ];
 
 function renderInfoBoxes(){
@@ -27,4 +27,26 @@ function renderInfoBoxes(){
     });
 }
 
+const groups = [
+    { name: "Ryhmä 1", url: "groupview.html" },
+    { name: "Ryhmä 2", url: "groupview.html" },
+    { name: "Ryhmä 3", url: "groupview.html" },
+    { name: "Ryhmä 4", url: "groupview.html" },
+    { name: "Ryhmä 5", url: "groupview.html" }
+];
+
+function renderGroupBoxes(){
+    const groupsList = document.getElementById('groups-list');
+    groupsList.innerHTML = '';
+
+    groups.forEach(group => {
+        const groupLink = document.createElement('a');
+        groupLink.href = group.url;
+        groupLink.className = 'group-btn';
+        groupLink.textContent = group.name;
+        groupsList.appendChild(groupLink);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', renderInfoBoxes);
+document.addEventListener('DOMContentLoaded', renderGroupBoxes);
