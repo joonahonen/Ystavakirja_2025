@@ -1,3 +1,4 @@
 # Credentials and secrets
-backend/credentials.json
-backend/node_modules/
+src/backend/credentials.json
+src/backend/node_modules/
+src/backend/.env
