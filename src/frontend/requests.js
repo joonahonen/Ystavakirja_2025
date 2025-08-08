@@ -6,21 +6,25 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         // Kerätään tiedot lomakkeesta
-        const nimi = document.getElementById("nimi").value.trim();
-        const ika = document.getElementById("ika").value.trim();
-        const tyo = document.getElementById("tyo").value.trim();
+        const groupID = document.getElementById("ryhma").value.trim();
+        const name = document.getElementById("nimi").value.trim();
+        const age = document.getElementById("ika").value.trim();
+        const birth = document.getElementById("syntymapaiva").value.trim();
+        const hobby = document.getElementById("harrastus").value.trim();
 
         // Varmistetaan että kaikki kentät on täytetty
-        if (!nimi || !ika || !tyo) {
-            alert("Kaikki kentät ovat pakollisia!");
+        if (!groupID || !name || !age || !birth || !hobby) {
+            alert("Kaikki kentät pakollisia!");
             return;
         }
 
         // Kerätään tiedot objektiksi
         const data = {
-            nimi: nimi,
-            ika: ika,
-            tyo: tyo
+            groupID: groupID,
+            name: name,
+            age: age,
+            birth: birth,
+            hobby: hobby
         };
 
         try{
@@ -36,9 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // Tarkistetaan vastaus
 
             // Jos onnistui:
-            const result = await response.json();
-            console.log(result);
-            alert("Tietojen lähetys onnistui!")
+            if (response.ok) {
+                console.log("Tietojen lähetys onnistui!");
+                alert("Tietojen lähetys onnistui!");
+            } else {
+                console.error("Tietojen lähetys epäonnistui:", response.statusText);
+                alert("Tietojen lähetys epäonnistui.");
+            }
 
             // Jos epäonnistui:
         } catch (error){
