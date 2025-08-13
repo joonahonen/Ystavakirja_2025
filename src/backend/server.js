@@ -10,24 +10,27 @@ app.use(cors());
 app.use(express.json());
 
 // Luodaan JWT autentikaatio API:lle
-const auth = new google.auth.JWT(
+async function getSheetsClient() {
+  const auth = new google.auth.JWT(
     process.env.GOOGLE_CLIENT_EMAIL,
     null,
     process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
     ['https://www.googleapis.com/auth/spreadsheets']
-);
+  );
 
-// Luodaan Sheets API instanssi, sekä tarvittavat muuttujat
-const sheets = google.sheets({ version: 'v4', auth });
-const SPREADSHEET_ID = process.env.GOOGLE_SHEET_ID;
-const RANGE = 'Sheet1!A1:F1000';
+  await auth.authorize(); // **important**
+
+  return google.sheets({ version: 'v4', auth });
+}
 
 // Tietojen haku Google Sheetistä
 app.get('/api/groups', async (req, res) => {
     try {
+
+        const sheets = await getSheetsClient();
         const response = await sheets.spreadsheets.values.get({
-            spreadsheetId: SPREADSHEET_ID,
-            range: RANGE,
+            spreadsheetId: process.env.GOOGLE_SHEET_ID,
+            range: 'Sheet1!A1:F1000',
         });
 
         const data = response.data.values;
