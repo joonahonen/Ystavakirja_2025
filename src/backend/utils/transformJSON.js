@@ -29,3 +29,4 @@ function transformSheetData(data){ // Muuntaa Google Sheets tiedot oikeanlaiseen
     }
     return Object.values(groupedData);
 }
+module.exports = { transformSheetData };
