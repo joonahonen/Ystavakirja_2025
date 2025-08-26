@@ -1,32 +1,40 @@
-function transformSheetData(data){ // Muuntaa Google Sheets tiedot oikeanlaiseen JSON-muotoon
-    if(!data || data.length < 2) return [];
+// Apu funktio: Muuntaa Google Sheetin datan haluttuun JSON-muotoon
+
+function transformSheetData(data) {
+    console.log("Data received:", data);
+    if (!data || data.length < 2) {
+        console.log("Data is empty or has less than 2 rows");
+        return [];
+    }
 
     const [headers, ...rows] = data;
+    console.log("Headers:", headers);
     const groupedData = {};
 
-    for(const row of rows) {
+    for(const row of rows){
         const rowData = Object.fromEntries(headers.map((key, index) => [key, row[index]]));
+        console.log("Row Data:", rowData);
 
-        const groupId = rowData["Group ID"];
+        const groupId = rowData["groupID"];
 
         if(!groupId) continue;
 
-        if(!groupedData[groupId]) {
+        if(!groupedData[groupId]){
             groupedData[groupId] = {
-                groupId: rowData["Group ID"],
-                groupName: rowData["Group Name"],
+                groupId: rowData["groupID"],
                 members: [],
             };
         }
 
         groupedData[groupId].members.push({
-            personId: rowData["Person ID"],
-            firstName: rowData["First Name"],
-            lastName: rowData["Last Name"],
-            email: rowData["Email"],
-            role: rowData["Role"]
+            name: rowData["name"],
+            age: rowData["age"],
+            birth: rowData["birth"],
+            hobby: rowData["hobby"],
         });
     }
+    console.log("Grouped Data:", groupedData);
     return Object.values(groupedData);
 }
+
 module.exports = { transformSheetData };

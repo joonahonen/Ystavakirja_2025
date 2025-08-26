@@ -20,10 +20,10 @@ const auth = new google.auth.GoogleAuth({
 const sheets = google.sheets({ version: 'v4', auth });
 
 // Apuri: Hakee kaikki rivit Google Sheetistä
-async function getSheetRows() {
+async function getSheetRows(){
     const res = await sheets.spreadsheets.values.get({
         spreadsheetId: process.env.GOOGLE_SHEET_ID,
-        range: 'Taulukko1',
+        range: 'Taulukko1!A:E',
     });
     return res.data.values;
 }
@@ -34,7 +34,7 @@ app.get('/api/groups', async (req, res) => {
         const rows = await getSheetRows();
         const data = transformSheetData(rows);
         res.json(data);
-    } catch (err) {
+    } catch(err){
         console.error('Virhe GET /api/groups:', err);
         res.status(500).json({ error: 'Tietojen haku Google Sheetistä epäonnistui.' });
     }
@@ -46,7 +46,7 @@ app.post('/api/submit', async (req, res) => {
         const { groupID, name, age, birth, hobby } = req.body;
 
         // Tarkistetaan kentät
-        if (!groupID || !name || !age || !birth || !hobby) {
+        if(!groupID || !name || !age || !birth || !hobby){
             return res.status(400).json({ error: 'Kaikkien kenttien tulee olla täytetty.' });
         }
 
@@ -65,7 +65,7 @@ app.post('/api/submit', async (req, res) => {
         console.log('Tietojen lisäys onnistui:', { groupID, name, age, birth, hobby });
         res.status(201).json({ message: 'Tietojen lisäys onnistui.' });
 
-    } catch (error) {
+    } catch(error){
         // Jos virhe, lähetetään 500
         console.error('Virhe POST /api/submit:', error);
         res.status(500).json({ error: 'Tietojen lähetys Google Sheettiin epäonnistui.' });
