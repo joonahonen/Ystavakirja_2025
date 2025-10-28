@@ -1,17 +1,20 @@
 
+
+// Tätä tiedostoa käytetty elementtien dynaamisen generoimisen testaamisessa
+// Tällähetkellä ei olennaista toiminnallisuutta
 function redirectToPage(url) {
     window.location.href = url;
 }
 
 const people = [
-  { name: "Aino", age: 23, job: "Ohjelmoija" },
-  { name: "Joona", age: 21, job: "Ohjelmoija" },
-  { name: "Sirpa", age: 68, job: "Opettaja" },
-  { name: "Niko", age: 23, job: "Prisma" },
-  { name: "Kati", age: 21, job: "Powerpark" }
+    { name: "Aino", age: 23, job: "Ohjelmoija" },
+    { name: "Joona", age: 21, job: "Ohjelmoija" },
+    { name: "Sirpa", age: 68, job: "Opettaja" },
+    { name: "Niko", age: 23, job: "Prisma" },
+    { name: "Kati", age: 21, job: "Powerpark" }
 ];
 
-function renderInfoBoxes(){
+function renderInfoBoxes() {
     const container = document.getElementById('container');
     container.innerHTML = '';
 
@@ -35,7 +38,7 @@ const groups = [
     { name: "Ryhmä 5", url: "groupview.html" }
 ];
 
-function renderGroupBoxes(){
+function renderGroupBoxes() {
     const groupsList = document.getElementById('groups-list');
     groupsList.innerHTML = '';
 

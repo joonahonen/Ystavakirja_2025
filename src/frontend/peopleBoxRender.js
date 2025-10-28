@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",() => {
+document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const groupToDisplay = params.get('groupId');
     fetchData(groupToDisplay);
@@ -9,30 +9,30 @@ document.addEventListener("DOMContentLoaded",() => {
 // Tässä tiedostossa haetaan tiedot ja piirretään ryhmien jäsenet
 
 // Tiedot haetaan serveriltä
-async function fetchData(groupToDisplay){
-    try{
-        const response = await fetch("http://localhost:3000/api/groups",{
+async function fetchData(groupToDisplay) {
+    try {
+        const response = await fetch("http://localhost:3000/api/groups", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
             }
         });
 
-        if(response.ok){
+        if (response.ok) {
             const data = await response.json();
             console.log("Data fetched successfully:", data);
             displayPeople(data, groupToDisplay);
-        } else{
+        } else {
             console.error("Failed to fetch data:", response.status);
         }
-    } catch(error){
+    } catch (error) {
         // Handle eroor
         console.error("Error fetching data:", error);
     }
 }
 
 // Apufuntio: auttaa XSS-suojauksessa
-function escapeHtml(str = ''){
+function escapeHtml(str = '') {
     return String(str)
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
@@ -42,17 +42,17 @@ function escapeHtml(str = ''){
 }
 
 // Ryhmän jäsenet renderöidään haetun tiedon perusteella
-function displayPeople(data, groupToDisplay){
+function displayPeople(data, groupToDisplay) {
     const container = document.getElementById("container");
-    container.innerHTML = ''; 
+    container.innerHTML = '';
 
-    if(!groupToDisplay){
+    if (!groupToDisplay) {
         container.textContent = 'Ryhmää ei valittu.';
         return;
     }
 
     const group = data.find(g => String(g.groupId) === String(groupToDisplay));
-    if(!group){
+    if (!group) {
         container.textContent = 'Ryhmää ei löytynyt.';
         return;
     }

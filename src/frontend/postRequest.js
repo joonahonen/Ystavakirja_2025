@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             hobby: hobby
         };
 
-        try{
+        try {
             // Lähetetään tiedot palvelimelle
             const response = await fetch("http://localhost:3000/api/submit", {
                 method: "POST",
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Jos epäonnistui:
-        } catch (error){
+        } catch (error) {
             console.error("Tietojen lähetyksessä tapahtui virhe:", error);
             alert("Tietojen lähetys epäonnistui. Yritä uudelleen myöhemmin.");
         }

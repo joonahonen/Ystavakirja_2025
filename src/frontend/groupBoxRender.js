@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",() => {
+document.addEventListener("DOMContentLoaded", () => {
     fetchData();
 });
 
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
 // Haetaan tiedot serveriltä
 async function fetchData() {
-    try{
+    try {
         const response = await fetch("http://localhost:3000/api/groups", {
             method: "GET",
             headers: {
@@ -16,24 +16,24 @@ async function fetchData() {
             }
         });
 
-        if(response.ok){
+        if (response.ok) {
             const data = await response.json();
             console.log("Data fetched successfully:", data);
-            
+
             displayGroups(data);
-        } else{
+        } else {
             console.error("Failed to fetch data:", response.status);
         }
-    } catch(error){
+    } catch (error) {
         // Handle eroor
         console.error("Error fetching data:", error);
     }
 }
 
 // Ryhmät renderöidään haetun tiedon perusteella
-function displayGroups(data){
+function displayGroups(data) {
     const groupsList = document.getElementById("groups-list");
-    groupsList.innerHTML = ''; 
+    groupsList.innerHTML = '';
 
     data.forEach(group => {
         const groupLink = document.createElement('a');
