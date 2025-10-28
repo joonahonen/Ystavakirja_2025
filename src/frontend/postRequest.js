@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const groupID = document.getElementById("ryhma").value.trim();
         const name = document.getElementById("nimi").value.trim();
         const age = document.getElementById("ika").value.trim();
-        const birth = document.getElementById("syntymapaiva").value.trim();
+        const birth = document.getElementById("kotipaikkakunta").value.trim();
         const hobby = document.getElementById("harrastus").value.trim();
 
         // Varmistetaan että kaikki kentät on täytetty
         if (!groupID || !name || !age || !birth || !hobby) {
-            alert("Kaikki kentät pakollisia!");
+            alert("Kaikki kentät ovat pakollisia!");
             return;
         }
 

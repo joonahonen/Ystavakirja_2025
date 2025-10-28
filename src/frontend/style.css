@@ -1,177 +1,202 @@
-body, h1, h2, p, a, button, input {
-    margin: 0;
-    padding: 0;
-    font-family: 'Cal Sans', Arial, sans-serif;
-    box-sizing: border-box;
+body,
+h1,
+h2,
+p,
+a,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  font-family: "Cal Sans", Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    background: #fdfae7;
-    min-height: 100vh;
+  background: #fdfae7;
+  min-height: 100vh;
 }
 
 /* Yläpalkki */
 .main-header {
-    background: #92ac90;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 3px 8px #0001;
-    position: relative;
-    z-index: 2;
+  background: #92ac90;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 8px #0001;
+  position: relative;
+  z-index: 2;
+}
+
+.form-icon {
+  position: absolute;
+  right: 72px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-icon-icon {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
 }
 
 /* Info */
 .info {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .info-icon {
-    width: 40px;
-    height: auto;
-    cursor: pointer;
+  width: 40px;
+  height: auto;
+  cursor: pointer;
 }
 
 /* Burgeri valikko */
 .hamburger {
-    width: 40px;
-    height: 40px;
-    margin-left: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 7px;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
 }
 .hamburger span {
-    display: block;
-    height: 4px;
-    width: 100%;
-    background: #fdfae7;
-    border-radius: 2px;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fdfae7;
+  border-radius: 2px;
 }
 
 /* Logo */
 .logo-container {
-    position: absolute;
-    left: 0; right: 0; top: 0; bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .logo-text {
-    font-family: 'Cal Sans', Arial, sans-serif;
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: black;
-    letter-spacing: 2px;
-    margin: 0;
-    pointer-events: auto;
+  font-family: "Cal Sans", Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 2px;
+  margin: 0;
+  pointer-events: auto;
 }
 
 /* Keskipalkki */
 .group-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
 }
 
-.groups-section, .info-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.groups-section,
+.info-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.groups-section h2, .info-section h2 {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-    margin-top: 20px;
-    font-weight: 400;
+.groups-section h2,
+.info-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  margin-top: 20px;
+  font-weight: 400;
 }
 
 .groups-list {
-    display: grid;
-    grid-template-columns: repeat(3, 210px);
-    grid-template-rows: repeat(3, 65px);
-    gap: 32px 48px;
-    justify-content: center;
-    margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 210px);
+  grid-template-rows: repeat(3, 65px);
+  gap: 32px 48px;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .group-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f8d6d6;
-    border-radius: 16px;
-    box-shadow: 2px 4px 5px #0002;
-    border: none;
-    font-size: 1.6rem;
-    color: #2d2d2d;
-    text-decoration: none;
-    height: 65px;
-    transition: box-shadow 0.15s, transform 0.15s;
-    cursor: pointer;
-    outline: none;
-    font-family: inherit;
-    font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8d6d6;
+  border-radius: 16px;
+  box-shadow: 2px 4px 5px #0002;
+  border: none;
+  font-size: 1.6rem;
+  color: #2d2d2d;
+  text-decoration: none;
+  height: 65px;
+  transition: box-shadow 0.15s, transform 0.15s;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  font-weight: 400;
 }
 
-.group-btn:hover, .group-btn:focus {
-    box-shadow: 2px 8px 16px #0002;
-    transform: translateY(-2px) scale(1.03);
-    background: #fbe3e3;
+.group-btn:hover,
+.group-btn:focus {
+  box-shadow: 2px 8px 16px #0002;
+  transform: translateY(-2px) scale(1.03);
+  background: #fbe3e3;
 }
 
 .info-text {
-    font-size: 1.1rem;
-    color: #333;
-    margin-top: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-    text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
 }
 
 /* Alapalkki */
 .main-footer {
-    text-align: center;
-    margin-top: 60px;
-    color: #888;
-    font-size: 1rem;
-    padding-bottom: 16px;
-    background: none;
-    box-shadow: none;
+  text-align: center;
+  margin-top: 60px;
+  color: #888;
+  font-size: 1rem;
+  padding-bottom: 16px;
+  background: none;
+  box-shadow: none;
 }
 
 /* Ryhmäsivu laatikot */
 .info-box {
-    border: 2px solid #333;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    background: #f8d6d6;
-    width: 300px;
+  border: 2px solid #333;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background: #f8d6d6;
+  width: 300px;
 }
 
 #container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px 28px;
-    justify-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px 28px;
+  justify-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 #membertext {
-    text-align: center;
+  text-align: center;
 }

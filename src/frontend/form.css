@@ -1,0 +1,71 @@
+/* Tämä CSS dokumentti on tehty muita jälkeenpäin, joten se on tehty erillisenä. */
+
+.form-div {
+  box-sizing: border-box;
+  max-width: 900px;
+  width: 95%;
+  margin: 30px auto;
+  border: none;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #f8d6d6;
+}
+
+.form-div .form-heading {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  margin-left: 6px;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.input-field label {
+  position: static;
+  display: block;
+  /* color: #8d8d8d; */
+  pointer-events: auto;
+  background-color: transparent;
+  left: auto;
+  transform: none;
+  margin-bottom: 6px;
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.input-field input,
+.input-field select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: solid 1px #8d8d8d;
+  letter-spacing: 1px;
+  width: 100%;
+  display: block;
+}
+
+.submit-form input {
+  cursor: pointer;
+  outline: 0;
+  color: black;
+  background-color: white;
+  border-color: white;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 0.25rem;
+  /* transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  :hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+  } */
+}

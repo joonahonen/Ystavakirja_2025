@@ -64,22 +64,10 @@ Ystäväkirja on nettisivu, jonka tarkoituksena on kerätä lyhyitä profiileja 
 
 ---
 
-## Julkaisu (kesken)
-- Backend:
-  -
-- Frontend:
-  -
----
-
 ## Yhteystiedot
   - Joona Ahonen: joona.ahonen@student.oulu.fi
   - Aino Kalliokoski: -
   - Kati Toppari: -
-
----
-
-## Changelog
-- **v1.0.0** — Ensimmäinen julkaisu
 
 ---
 

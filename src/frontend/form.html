@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ystäväkirja</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
     <header class="main-header">
         <div class="hamburger" tabindex="0">
@@ -17,78 +19,115 @@
             <span></span>
         </div>
 
-        <a href = "index.html">
+        <a href="index.html">
             <div class="logo-container">
                 <span class="logo-text">Ystäväkirja</span>
             </div>
         </a>
 
-        <a href="infopage.html">
-            <div class="info">
-                <img src = "assets/info.png" alt="Info" class="info-icon">
+        <a href="form.html">
+            <div class="form-icon">
+                <img src="assets/google-forms.png" alt="Form" class="form-icon-icon">
             </div>
         </a>
-        
+
+        <a href="infopage.html">
+            <div class="info">
+                <img src="assets/info.png" alt="Info" class="info-icon">
+            </div>
+        </a>
+
     </header>
     <main>
-        <!--kommentti-->
-        <h3>Tietoja minusta</h3>
-        <div>
-  <form action="/action_page.php">
-    <label for="nimi">Nimi</label>
-    <input type="text" id="nimi" name="nimi" placeholder="Nimeni on...">
 
-    <label for="kotipaikkakunta">Kotipaikkakunta</label>
-    <input type="text" id="kotipaikkakunta" name="kotipaikkakunta" placeholder="Olen kotoisin...">
+        <div class="form-div">
+            <h3 class="form-heading">Tietoja minusta</h3>
+            <form id="form">
+                <div class="input-field">
+                    <label for="nimi">Nimi</label>
+                    <input type="text" id="nimi" name="nimi" placeholder="Nimeni on...">
+                </div>
 
-    <label for="harrastus">Harrastukset</label>
-    <input type="text" id="harrastus" name="harrastus" placeholder="Harrastan...">
+                <div class="input-field">
+                    <label for="ika">Ikä</label>
+                    <input type="text" id="ika" name="ika" placeholder="Ikäni on...">
+                </div>
 
-    <h3>Lemppari...</h3>
+                <div class="input-field">
+                    <label for="kotipaikkakunta">Kotipaikkakunta</label>
+                    <input type="text" id="kotipaikkakunta" name="kotipaikkakunta" placeholder="Kotipaikkakuntani on...">
+                </div>
 
-    <label for="herkku">Herkku</label>
-    <input type="text" id="herkku" name="herkku" placeholder="Nam nam...">
+                <div class="input-field">
+                    <label for="harrastus">Harrastukset</label>
+                    <input type="text" id="harrastus" name="harrastus" placeholder="Harrastukseni on...">
+                </div>
 
-    <label for="eläin">Eläin</label>
-    <input type="text" id="eläin" name="eläin" placeholder="Mjäy...">
 
-    <label for="artisti">Artisti</label>
-    <input type="text" id="artisti" name="artisti" placeholder="Artisti..."><!--keksi tähän joku hauska-->
+                <!-- <h3>Lemppari...</h3>
 
-    <h3>Otsikko</h3> <!--keksi otsikko, tähän tulee random kysymyksiä-->
+                <div class="input-field">
+                    <label for="herkku">Herkku</label>
+                    <input type="text" id="herkku" name="herkku" placeholder="Nam nam...">
+                </div>
 
-    <label for="ammatti">Isona minusta tulee</label>
-    <input type="text" id="ammatti" name="ammatti" placeholder="Aikuinen...">
+                <div class="input-field">
+                    <label for="eläin">Eläin</label>
+                    <input type="text" id="eläin" name="eläin" placeholder="Mjäy...">
+                </div>
 
-    <label for="asia">Asia, jota ilman en voi elää on</label>
-    <input type="text" id="asia" name="asia" placeholder="Vastaus..."><!--tähänki joku-->
+                <div class="input-field">
+                    <label for="artisti">Artisti</label>
+                    <input type="text" id="artisti" name="artisti"
+                        placeholder="Artisti...">
+                </div>
 
-    <label for="ryhmä">Pienryhmän numero</label>
-    <select id="ryhmä" name="ryhmä">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-      <option value="11">11</option>
-      <option value="12">12</option>
-      <option value="13">13</option>
-      <option value="14">14</option>
-      <option value="15">15</option>
-    </select>
-  
-    <input type="submit" value="Tallenna"> 
-  </form>
-</div>
+                <h3>Otsikko</h3>
+
+                <div class="input-field">
+                    <label for="ammatti">Isona minusta tulee</label>
+                    <input type="text" id="ammatti" name="ammatti" placeholder="Aikuinen...">
+                </div>
+
+                <div class="input-field">
+                    <label for="asia">Asia, jota ilman en voi elää on</label>
+                    <input type="text" id="asia" name="asia" placeholder="Vastaus...">
+                </div> -->
+
+                <div class="input-field">
+                    <label for="ryhma">Pienryhmän numero</label>
+                    <select id="ryhma" name="ryhmä">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
+                </div>
+
+                <div class="submit-form">
+                    <input type="submit" value="Tallenna">
+                </div>
+            </form>
+        </div>
+
     </main>
-     <footer class="main-footer">
+    
+    <footer class="main-footer">
         <p>Ystäväkirja &copy; 2025</p>
     </footer>
 
+    <script src="postRequest.js"></script>
 </body>
+
 </html>
