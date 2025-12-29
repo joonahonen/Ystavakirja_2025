@@ -4,7 +4,15 @@ Ystäväkirja on nettisivu, jonka tarkoituksena on kerätä lyhyitä profiileja 
 
 ---
 
+## Kuvia
+
+![Etusivu](assets/etusivu.png)
+![Infosivu](assets/infosivu.png)
+
+---
+
 ## Ominaisuudet
+
 - Tallennetaan tiedot (groupID, name, age, birth, hobby) Google Sheettiin
 - Luetaan kaikki rivit Sheetistä ja muutetaan tiedot käytettävään JSON muotoon
 - Frontend sivut:
@@ -16,6 +24,7 @@ Ystäväkirja on nettisivu, jonka tarkoituksena on kerätä lyhyitä profiileja 
 ---
 
 ## Projektin rakenne (tärkeät)
+
 - src/backend/server.js — Express palvelin, Sheets API käyttö
 - src/backend/.env — ympäristönmuuttujat, arkaluontoiset tiedot (EI COMMITATTU)
 - src/backend/utils/transformJSON.js — muuttaa API:sta JSON:in käytettävään muotoon
@@ -27,6 +36,7 @@ Ystäväkirja on nettisivu, jonka tarkoituksena on kerätä lyhyitä profiileja 
 ---
 
 ## Oletukset
+
 - Node.js
 - npm
 - Google Cloud projekti jossa Google Sheets API käytössä
@@ -34,30 +44,32 @@ Ystäväkirja on nettisivu, jonka tarkoituksena on kerätä lyhyitä profiileja 
 ---
 
 ## Palvelimen käyttöönotto
-1.
-   - Avaa terminaali `src/backend`:
-     - Windows PowerShell:
-       - cd "c:...\Ystavakirja_2025\src\backend"
-       - npm install
 
-2. Luo "service account" Google Cloudissa. Kytke Google Sheets API päälle ja lataa JSON key.
+1.  - Avaa terminaali `src/backend`:
+      - Windows PowerShell:
+        - cd "c:...\Ystavakirja_2025\src\backend"
+        - npm install
 
-3. Jaa Google Sheet tiedosto service accountin sähköpostiosoitteelle (muista muokkausoikeudet).
+2.  Luo "service account" Google Cloudissa. Kytke Google Sheets API päälle ja lataa JSON key.
 
-4. Luo `src/backend/.env`:
-   - GOOGLE_CLIENT_EMAIL (service account sähöposti)
-   - GOOGLE_PRIVATE_KEY (avain joka vastaa sähköpostia)
-   - GOOGLE_SHEET_ID (sheetin tunnus, jota halutaan muokata)
+3.  Jaa Google Sheet tiedosto service accountin sähköpostiosoitteelle (muista muokkausoikeudet).
 
-5. Käynnistä palvelin:
-   - `src/backend`, komento:
-     - `node server.js`
-   - Pitäisi lukea:
-     - `Server running at http://localhost:3000/`
+4.  Luo `src/backend/.env`:
+
+    - GOOGLE_CLIENT_EMAIL (service account sähöposti)
+    - GOOGLE_PRIVATE_KEY (avain joka vastaa sähköpostia)
+    - GOOGLE_SHEET_ID (sheetin tunnus, jota halutaan muokata)
+
+5.  Käynnistä palvelin:
+    - `src/backend`, komento:
+      - `node server.js`
+    - Pitäisi lukea:
+      - `Server running at http://localhost:3000/`
 
 ---
 
 ## Kehitys
+
 - Avaa `src/frontend/index.html` selaimessa
 - Muokkaa HTML/JS/CSS tiedostoja
 - Käytä VSCode Liveserver lisäosaa
@@ -65,17 +77,18 @@ Ystäväkirja on nettisivu, jonka tarkoituksena on kerätä lyhyitä profiileja 
 ---
 
 ## Yhteystiedot
-  - Joona Ahonen: joona.ahonen@student.oulu.fi
-  - Aino Kalliokoski: -
-  - Kati Toppari: -
+
+- Joona Ahonen: joona.ahonen@student.oulu.fi
+- Aino Kalliokoski: -
+- Kati Toppari: -
 
 ---
 
 ## Tulevaisuuden suunnitelmia
+
 - Käyttäjien autentikaatio
 - Profiilikuva tai piirtokenttä jokaiselle käyttäjälle
 - Parempi UI/UX
 - Tumma teema
 
 ---
-
